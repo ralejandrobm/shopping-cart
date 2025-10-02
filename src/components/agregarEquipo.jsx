@@ -34,7 +34,7 @@ export default function AgregarEquipo({products, setProducts}) {
 
   return (
     <div className=" w-screen flex justify-center">
-      <div className="flex  flex-col justify-between items-center border border-gray-500 w-4/5 m-2 p-2 rounded">
+      <div className="flex  flex-col justify-between items-center border border-gray-500 w-11/12 m-1 p-1 rounded">
         <div className="w-full flex">
           <div className=" flex justify-center text-center w-screen">
             <p className="  "> Agregar equipo de video</p>
@@ -47,7 +47,7 @@ export default function AgregarEquipo({products, setProducts}) {
           </button>
         </div>
         {visible && (
-          <form className=" flex flex-col mt-2" onSubmit={agregarEquipo}>
+          <form className=" flex flex-col mt-2 w-3/4" onSubmit={agregarEquipo}>
             <label htmlFor="nombre"> nombre: </label>
             <input
               id="nombre"

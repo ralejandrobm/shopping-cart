@@ -10,7 +10,7 @@ export default function Catalogo({products, onClick}) {
         <>
             <div className=' flex flex-wrap  justify-around align-baseline pb-2'>
                 {products.map((product) => (
-                    <div key={product.id} className='flex justify-center shadow-md shadow-gray-600 border border-gray-500 w-3/10 m-2 p-2 rounded gap-2'>
+                    <div key={product.id} className='flex justify-center shadow-md shadow-gray-600 border border-gray-500 min-w-2/5 max-w-3/4 m-2 p-2 rounded gap-2'>
                         <div>
                             <h1 className='my-2 font-bold'>{product.nombre}</h1>
                             <p className=' text-gray-500'>{product.descripcion}</p>
