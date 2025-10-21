@@ -1,9 +1,10 @@
 import React from 'react'
+import {useProducts} from '../contex/products'
 
 
-export default function Catalogo({products, onClick}) {
+export default function Catalogo() {
 
-
+const {products, agregar} = useProducts()
 
 
     return (
@@ -15,7 +16,7 @@ export default function Catalogo({products, onClick}) {
                             <h1 className='my-2 font-bold'>{product.nombre}</h1>
                             <p className=' text-gray-500'>{product.descripcion}</p>
                             <p className=' text-gray-500'>cantidad : {product.cantidad}</p>
-                            <button onClick={()=>onClick(product.id)} className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 active:scale-95  active:bg-green-600 transition-all duration-150 ease-in-out mt-2">
+                            <button onClick={()=>agregar(product.id)} className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 active:scale-95  active:bg-green-600 transition-all duration-150 ease-in-out mt-2">
                                 Agregar
                             </button>
                         </div>
@@ -26,8 +27,6 @@ export default function Catalogo({products, onClick}) {
                     </div>
                 ))}
             </div>
-
-
         </>
     )
 }

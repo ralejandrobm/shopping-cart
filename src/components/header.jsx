@@ -1,9 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 
 export default function Header() {
+  const nav = useNavigate()
   return (
-    <div className=' bg-blue-900 flex justify-center text-3xl cursor-pointer h-10'>
-            <p className=' text-white'>carrito de compras</p>
+    <div className=' bg-blue-900 flex justify-center  cursor-pointer h-10'>
+            <p className=' text-white text-2xl pr-4'><a onClick={()=>nav("/agregar")}>agregar producto</a></p>
+            <p className=' text-white text-3xl'><a onClick={()=>nav("/")}>Catalogo</a></p>
+            <p className=' text-white text-2xl pl-4'><a onClick={()=>nav("/carrito")}>carrito de compras</a></p>
     </div>
   )
 }

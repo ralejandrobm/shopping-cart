@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { useProducts } from "../contex/products";
 
-export default function AgregarEquipo({products, setProducts}) {
+export default function AgregarEquipo() {
+  const {products, setProducts} = useProducts()
   const [visible, setVisible] = useState(false);
 
   const [image, setImage] = useState(null);
